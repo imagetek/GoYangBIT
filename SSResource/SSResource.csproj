@@ -8,6 +8,12 @@
     <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="images\기본\goyang-bw.png" />
+    <None Remove="images\기본\goyang-color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\기본\goyang-bw.png" />
+    <Resource Include="images\기본\goyang-color.png" />
     <Resource Include="images\날씨\cloud.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -32,11 +38,8 @@
     <Resource Include="images\main_handler_c.png" />
     <Resource Include="images\그립아이콘.png" />
     <Resource Include="images\그립아이콘B.png" />
-    <Resource Include="images\기본\gwacheon-color.png" />
-    <Resource Include="images\기본\gwacheon-bw.png" />
-    <Resource Include="images\기본\gwacheon.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="images\기본\goyang-color.png" />
+    <Resource Include="images\기본\goyang-bw.png" />
     <Resource Include="images\기본\siheung-1.png" />
     <Resource Include="images\기본\siheung-2.png" />
     <Resource Include="images\기본\siheung-3.png" />
