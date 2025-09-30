@@ -39,7 +39,7 @@
     <DebugType>full</DebugType>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>ssns.ico</ApplicationIcon>
+    <ApplicationIcon>SSNS.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -51,7 +51,6 @@
     <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
     <BaseOutputPath>bin</BaseOutputPath>
   </PropertyGroup>
   <ItemGroup>
@@ -76,6 +75,7 @@
     <Content Include="data\BIT.db3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SSNS.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SSCommonNET\SSCommonNET.csproj" />
@@ -175,7 +175,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="PowerTTS_M.h">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
