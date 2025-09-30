@@ -8,25 +8,6 @@
     <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="images\LCD\test_cat.png" />
-    <None Remove="images\기본\gwacheon-2.png" />
-    <None Remove="images\기본\gwacheon-3.png" />
-    <None Remove="images\기본\gwacheon.jpg" />
-    <None Remove="images\기본\siheung-1.png" />
-    <None Remove="images\기본\siheung-2.png" />
-    <None Remove="images\기본\siheung-3.png" />
-    <None Remove="images\기본\siheung-4.png" />
-    <None Remove="images\기본\siheung-5.png" />
-    <None Remove="images\기본\siheung-6.png" />
-    <None Remove="images\기본\siheung.png" />
-    <None Remove="images\날씨\cloud.png" />
-    <None Remove="images\날씨\rain.png" />
-    <None Remove="images\날씨\snow.png" />
-    <None Remove="images\날씨\sun.png" />
-    <None Remove="images\날씨\sun_cloud.png" />
-    <None Remove="images\날씨\temp.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\날씨\cloud.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

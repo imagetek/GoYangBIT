@@ -6,7 +6,7 @@
         xmlns:ctrls="clr-namespace:SSControlsNET;assembly=SSControlsNET"
         xmlns:local="clr-namespace:BitView"
         mc:Ignorable="d"
-        Title="과천시BIT프로그램"
+        Title="고양시BIT프로그램"
         MinWidth="950"
         MinHeight="500"
         Width="950"
