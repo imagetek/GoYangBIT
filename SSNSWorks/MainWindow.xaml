@@ -1,0 +1,68 @@
+﻿ <Window x:Class="SSNSWorks.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ctrls="clr-namespace:SSControlsNET;assembly=SSControlsNET"
+        xmlns:local="clr-namespace:SSNSWorks"
+        mc:Ignorable="d" Title="BIT프로그램" MinWidth="900" MinHeight="600" Height="768" Width="1024" 
+        ShowInTaskbar="True" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" 
+        Loaded="Window_Loaded" Closing="Window_Closing" Closed="Window_Closed">
+    <Grid>
+        <Border Background="{DynamicResource COLOR_배경}" BorderThickness="2" BorderBrush="{DynamicResource COLOR_외각선}" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="32" />
+                    <RowDefinition Height="1" />
+                    <RowDefinition />
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                <ContentControl MouseDoubleClick="ContentControl_MouseDoubleClick">
+                    <Grid Background="{DynamicResource COLOR_배경}" MouseLeftButtonDown="Grid_MouseLeftButtonDown" MouseMove="Grid_MouseMove" MouseLeftButtonUp="Grid_MouseLeftButtonUp">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="1" />
+                            <RowDefinition Height="1" />
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="16,0,0,0">
+                            <Image Source="/SSNSWorks;component/SSNS.ico" VerticalAlignment="Center" Width="24" Stretch="Uniform" />
+                            <TextBlock x:Name="txt제목" TextWrapping="NoWrap" Foreground="{DynamicResource COLOR_FONT_A}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="8,0,50,0"  />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,8,0">
+                            <Button x:Name="btnMinimize" Width="18" Height="18" VerticalAlignment="Center" Margin="5,0,0,0" Click="btnMinimize_Click" Focusable="False">
+                                <Grid HorizontalAlignment="Center">
+                                    <Line Stroke="{DynamicResource COLOR_FONT_A}" StrokeThickness="2" X1="0" Y1="9" X2="10" Y2="9" />
+                                </Grid>
+                            </Button>
+                            <Button x:Name="btnMaximize" Width="18" Height="18" VerticalAlignment="Center" Margin="5,0,0,0" Click="btnMaximize_Click"  Focusable="False">
+                                <Grid HorizontalAlignment="Center">
+                                    <Border x:Name="icNormal" BorderBrush="{DynamicResource COLOR_FONT_A}" BorderThickness="1,2,1,1" Width="10" Height="10" />
+                                    <Grid x:Name="icMaximize" Visibility="Collapsed">
+                                        <Border BorderBrush="{DynamicResource COLOR_FONT_A}" BorderThickness="1,2,1,1" Width="7" Height="7" Margin="3,-3,0,0" />
+                                        <Border BorderBrush="{DynamicResource COLOR_FONT_A}" Background="{DynamicResource COLOR_배경}"  BorderThickness="1,2,1,1" Width="7" Height="7" Margin="-3,3,0,0" />
+                                    </Grid>
+                                </Grid>
+                            </Button>
+                            <Button x:Name="btnMainClose" Width="18" Height="18" VerticalAlignment="Center" Margin="5,0,0,0" Click="btnMainClose_Click"  Focusable="False">
+                                <Grid HorizontalAlignment="Center">
+                                    <Line Stroke="{DynamicResource COLOR_FONT_A}" StrokeThickness="2" X1="0" Y1="0" X2="10" Y2="9" />
+                                    <Line Stroke="{DynamicResource COLOR_FONT_A}" StrokeThickness="2" X1="10" Y1="0" X2="0" Y2="9" />
+                                </Grid>
+                            </Button>
+                        </StackPanel>
+                        <Rectangle Fill="{DynamicResource COLOR_구분선B}" Grid.Row="1" />
+                        <Rectangle Fill="{DynamicResource COLOR_구분선C}" Grid.Row="2"  />
+                    </Grid>
+                </ContentControl>
+                <Rectangle Fill="{DynamicResource COLOR_구분선B}" Grid.Row="1" />
+                <Grid Grid.Row="2" Margin="5">
+                    <local:uc메인화면 x:Name="_u메인" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    <Button x:Name="btn설정저장" Content="테스트" Width="60" Height="20" Margin="0,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="btn설정저장_Click"/>
+                </Grid>
+                <Grid Grid.Row="3" x:Name="gridGrip" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="20" Height="20" Cursor="SizeNWSE" Background="#02000000" MouseLeftButtonDown="gridGrip_MouseLeftButtonDown" MouseMove="gridGrip_MouseMove" MouseLeftButtonUp="gridGrip_MouseLeftButtonUp">
+                    <Image Source="/SSNSWorks;component/Resource/그립아이콘B.png" Stretch="Fill" />
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

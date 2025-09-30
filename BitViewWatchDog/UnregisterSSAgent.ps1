@@ -1,0 +1,1 @@
+﻿Unregister-ScheduledTask -TaskName "SSAgent" -Confirm:$false

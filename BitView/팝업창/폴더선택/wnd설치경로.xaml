@@ -1,0 +1,28 @@
+﻿<Window x:Class="BitView.wnd설치경로"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"       
+        xmlns:ctrl="clr-namespace:SSControlsNET;assembly=SSControlsNET"
+        xmlns:local="clr-namespace:BitView"
+        mc:Ignorable="d" 
+        WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True"
+        Title="설치경로 선택" Height="180" Width="280"  Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="150" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="프로그램 설치경로를 선택해주세요." TextAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource fontA_foreground}" FontWeight="Bold" />
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel>
+                <ctrl:ssButton x:Name="btn1" Width="128" Height="128" ToolTip="기본폴더" EnabledReleased="/SSResource;component/images/팝업창/폴더선택/기본.png" EnabledClicked="/SSResource;component/images/팝업창/폴더선택/기본.png" Click="btn1_Click"/>
+                <TextBlock Text="기본폴더" TextAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource COLOR_FONT_A}" />
+            </StackPanel>
+            <StackPanel>
+                <ctrl:ssButton x:Name="btn2" Width="128" Height="128" ToolTip="폴더찾기" EnabledReleased="/SSResource;component/images/팝업창/폴더선택/검색.png" EnabledClicked="/SSResource;component/images/팝업창/폴더선택/검색.png" Click="btn2_Click"/>
+                <TextBlock Text="폴더찾기" TextAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource COLOR_FONT_A}" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

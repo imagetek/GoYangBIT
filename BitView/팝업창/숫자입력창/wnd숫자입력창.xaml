@@ -1,0 +1,46 @@
+﻿<Window x:Class="BitView.wnd숫자입력창"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ctrl="clr-namespace:SSControlsNET;assembly=SSControlsNET" 
+        xmlns:local="clr-namespace:BitView"
+        mc:Ignorable="d" Title="비밀번호 입력" Height="606" Width="529" Topmost="True"
+        WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True"
+        Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid>
+        <!--<Canvas x:Name="cvMain" ClipToBounds="True">
+            <Grid x:Name="mainGrid">-->               
+                <TextBlock Text="비밀번호 입력" Foreground="#3a5aaf" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39, 33, 0, 0" FontFamily="{DynamicResource NanumBarunGothic}" FontWeight="Bold" FontSize="25" TextAlignment="Center" Width="312" Height="26" />
+                <PasswordBox x:Name="txtPassword" Foreground="#484848" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,74,0,0" FontFamily="{DynamicResource NanumBarunGothic}" FontSize="57" Width="360" Height="69" />
+                <ctrl:ssButton x:Name="btnClose" HorizontalAlignment="Right" VerticalAlignment="Top" Width="61" Height="61" Tag="Close" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/닫기.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/닫기b.png" Margin="0,20,36,0" Click="btn1_Click" />
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0, 200, 0, 0">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                        <ctrl:ssButton Name="btn1" Width="104" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/1.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/1b.png" Tag="1" Click="btn1_Click" />
+                        <ctrl:ssButton Name="btn2" Width="104" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/2.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/2b.png" Tag="2" Click="btn1_Click" />
+                        <ctrl:ssButton Name="btn3" Width="104" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/3.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/3b.png" Tag="3" Click="btn1_Click" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                        <ctrl:ssButton Name="btn4" Width="104" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/4.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/4b.png" Tag="4" Click="btn1_Click" />
+                        <ctrl:ssButton Name="btn5" Width="104" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/5.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/5b.png" Tag="5" Click="btn1_Click" />
+                        <ctrl:ssButton Name="btn6" Width="104" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/6.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/6b.png" Tag="6" Click="btn1_Click" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                        <ctrl:ssButton Name="btn7" Width="104" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/7.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/7b.png" Tag="7" Click="btn1_Click" />
+                        <ctrl:ssButton Name="btn8" Width="104" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/8.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/8b.png" Tag="8" Click="btn1_Click" />
+                        <ctrl:ssButton Name="btn9" Width="104" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/9.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/9b.png" Tag="9" Click="btn1_Click" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                        <ctrl:ssButton Name="btnDot" Width="104" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/소수점.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/소수점b.png" Tag="." Click="btn1_Click" />
+                        <ctrl:ssButton Name="btn0" Width="104" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/0.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/0b.png" Tag="0" Click="btn1_Click" />
+                        <ctrl:ssButton Name="btnDel" Width="104" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/지우기.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/지우기b.png" Tag="d" Click="btn1_Click" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,23,0,0" HorizontalAlignment="Center" >
+                        <ctrl:ssButton Name="btnOK" Width="208" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/확인.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/확인b.png" Tag="OK" Click="btn1_Click" />
+                        <ctrl:ssButton Name="btnReinput" Width="104" Height="66" EnabledReleased="/SSResource;component/images/팝업창/숫자입력창/다시입력.png" EnabledClicked="/SSResource;component/images/팝업창/숫자입력창/다시입력b.png" Tag="r" Click="btn1_Click" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        <!--</Canvas>
+    </Grid>-->
+</Window>

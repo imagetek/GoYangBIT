@@ -1,0 +1,72 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BitView" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SEQ_NO" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="BIT_ID" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">461</Value>
+    </Setting>
+    <Setting Name="MOBILE_NO" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">25489</Value>
+    </Setting>
+    <Setting Name="STATION_NM" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\uC0B0\uB4A4\uB9C8\uC744</Value>
+    </Setting>
+    <Setting Name="SERVER_URL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.255.164</Value>
+    </Setting>
+    <Setting Name="SERVER_TYPE" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="SERVER_PORT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">9001</Value>
+    </Setting>
+    <Setting Name="FTP_GBN" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="FTP_IP" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FTP_PORT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="FTP_USERID" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FTP_USERPWD" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HTTP_URL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.255.165</Value>
+    </Setting>
+    <Setting Name="HTTP_PORT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8080</Value>
+    </Setting>
+    <Setting Name="ENV_GBN" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ENV_PORT_NM" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ENV_BAUD_RATE" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">57600</Value>
+    </Setting>
+    <Setting Name="CAM_NO1" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CAM_NO1_ROTATE" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CAM_NO2" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CAM_NO2_ROTATE" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="REGDATE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2024-08-26T13:50:32.1690974</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

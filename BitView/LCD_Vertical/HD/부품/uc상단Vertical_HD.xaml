@@ -1,0 +1,204 @@
+﻿<UserControl x:Class="BitView.uc상단Vertical_HD"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BitView" 
+             mc:Ignorable="d" TextOptions.TextFormattingMode="Ideal" TextOptions.TextRenderingMode="Auto"
+             Loaded="UserControl_Loaded"
+             Unloaded="UserControl_Unloaded"
+             Height="95"
+             Width="710"
+            >
+    <StackPanel Orientation="Vertical">
+        <Border BorderBrush="Black" BorderThickness="0 0 0 1">
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        Height="50"
+                        Width="710"
+                        >
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Width="500"
+                            >
+                    <Image Name="img로고"
+                           Width="130"                           
+                           Margin="10 0 10 0"
+                           HorizontalAlignment="Left">
+                        <Image.Source>
+                            <FormatConvertedBitmap  Source="/SSResource;component/images/기본/gwacheon-3.png" />
+                        </Image.Source>
+                    </Image>
+                    <TextBlock x:Name="txt정류소"
+                                Text="갈현2통마을회관"
+                                FontSize="36"
+                                Width="350"
+                                Foreground="Black"
+                                VerticalAlignment="Center"
+                                FontWeight="Bold"
+                                Padding="0"
+                                Margin="0"
+                                TextAlignment="Center" />
+                </StackPanel>
+                <Label x:Name="txt모바일번호"
+                       Content="정류장ID  25-489"
+                       Width="210"
+                       Height="50"
+                       FontSize="25"
+                       Foreground="Black"
+                       VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center"
+                       FontWeight="Bold"
+                       />
+
+            </StackPanel>
+        </Border>
+        
+        <StackPanel Width="710"
+                    Height="45"
+                    Background="White"
+                    Orientation="Horizontal">
+            <!--<StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Width="710"
+                        Height="45">-->
+                <StackPanel Orientation="Horizontal" 
+                            HorizontalAlignment="Left" 
+                            Width="530" 
+                            VerticalAlignment="Center"
+                            Margin="10 0">
+                    <TextBlock x:Name="txt년"
+                               Text="2023년"
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Foreground="Black" />
+                    <TextBlock x:Name="txt월일"
+                               Text="12월 31일"
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Foreground="Black"
+                               Margin="0 0 10 0" />
+                    <TextBlock x:Name="txt시간"
+                               Text="오전 12:59"
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Foreground="Black"
+                               Margin="10 0"
+                               TextAlignment="Right" />
+                </StackPanel>
+                
+                <!--<Border BorderBrush="Black"
+                        BorderThickness="3 0 0 0"
+                        Margin="10 2">
+                    
+                </Border>-->
+            <!--<StackPanel HorizontalAlignment="Right"
+                        Width="335"
+                        VerticalAlignment="Center"
+                        Margin="10 0">
+                    
+                </StackPanel>-->
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        x:Name="battery">
+
+                <Grid>
+                    <Border BorderBrush="Gray"
+                            BorderThickness="5"
+                            Width="145"
+                            Height="35"
+                            CornerRadius="3"
+                            Margin="0 0 0 0" />
+                    <Rectangle x:Name="batteryFillRectangle"
+                               Width="130"
+                               Height="20"
+                               Fill="Gray"
+                               HorizontalAlignment="Left"
+                               Margin="7 4">
+                    </Rectangle>
+                    <TextBlock x:Name="batteryPercentText"
+                               Text="34%"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               FontWeight="DemiBold"
+                               Padding="0"
+                               Margin="0" />
+                </Grid>
+                <Border Height="20"
+                        Width="5"
+                        Background="Gray"
+                        CornerRadius="0, 3, 3, 0"
+                        VerticalAlignment="Center">
+
+                </Border>
+            </StackPanel>
+        </StackPanel>
+        <!--</StackPanel>-->
+        
+    </StackPanel>
+   
+    <!--<UserControl.Background>
+        <ImageBrush ImageSource="/SSResource;component/images/EPD/상단배경H.png"/>
+    </UserControl.Background>-->
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Width="180" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Name="img로고" Width="70" Source="/SSResource;component/images/기본/PAJU_H.png"/>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock x:Name="txt년" Text="2023년" Width="80" Height="Auto" Margin="0,0,0,0" FontSize="18" TextAlignment="Right" FontWeight="Bold" FontFamily="{DynamicResource KoPubDotum}" Foreground="#000000" />
+                    <TextBlock x:Name="txt월일" Text="12월 31일" Width="80" Height="Auto" Margin="0,5,0,0" FontSize="18" TextAlignment="Right" FontWeight="Bold" FontFamily="{DynamicResource KoPubDotum}" Foreground="#000000" />
+                </StackPanel>
+            </StackPanel>
+            <TextBlock x:Name="txt시간" Text="오전 12:59" Width="Auto" Height="Auto" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="20pt" FontWeight="Bold" FontFamily="{DynamicResource KoPubDotum}" Foreground="#000000"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Name="txt정류소" Text="신성엔에스텍" Width="Auto" Height="Auto" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       TextAlignment="Center" FontSize="27pt" FontWeight="Bold" FontFamily="{DynamicResource KoPubDotum}" Foreground="#000000"/>
+            <TextBlock x:Name="txt모바일번호" Text="(123456)" Width="Auto" Height="Auto" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       TextAlignment="Center" FontSize="20pt" FontWeight="Bold" FontFamily="{DynamicResource KoPubDotum}" Foreground="#000000"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <StackPanel>
+                    <Image x:Name="img오늘날씨" Width="64" Height="45" Source="/SSResource;component/images/epd/날씨/맑음.png" Stretch="Fill"/>      --><!--맑음 흐림 구름많음--><!--
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="  최고   최저" Width="Auto" Height="Auto" Margin="10,0,0,0" HorizontalAlignment="Left" 
+                       FontSize="14pt" FontWeight="Bold" FontFamily="{DynamicResource KoPubDotum}" Foreground="#000000"/>
+                    <TextBlock x:Name="txt오늘기온" Text="99°C  -99°C" Width="Auto" Height="Auto" Margin="10,0,0,0" HorizontalAlignment="Left"
+                       FontSize="14pt" FontWeight="Bold" FontFamily="{DynamicResource KoPubDotum}" Foreground="#000000"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="150" Margin="5,5,0,0">
+                <TextBlock Text="미세먼지 : " Width="90" TextAlignment="Right"
+                    FontSize="16" FontWeight="Bold" FontFamily="{DynamicResource KoPubDotum}" Foreground="#000000"/>
+                <TextBlock x:Name="txtFineDust" Text="좋음" Width="60" Height="Auto" TextAlignment="Left"
+                    FontSize="16" FontWeight="Bold" FontFamily="{DynamicResource KoPubDotum}" Foreground="#000000"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="150" Margin="5,5,0,0">
+                <TextBlock Text="초미세먼지 : " Width="90" TextAlignment="Right"
+                    FontSize="16" FontWeight="Bold" FontFamily="{DynamicResource KoPubDotum}" Foreground="#000000"/>
+                <TextBlock x:Name="txtUltraFineDust" Text="매우나쁨" Width="60" Height="Auto" TextAlignment="Left"
+                    FontSize="16" FontWeight="Bold" FontFamily="{DynamicResource KoPubDotum}" Foreground="#000000"/>
+            </StackPanel>
+            --><!--<StackPanel Orientation="Horizontal">
+                <Image x:Name="img내일날씨" Width="58" />
+                <StackPanel>
+                    <TextBlock Text="내일" Width="Auto" Height="Auto" Margin="0,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                       TextAlignment="Left" FontSize="12pt" FontWeight="Bold" FontFamily="{DynamicResource KoPubDotum}" Foreground="#000000"/>
+                    <TextBlock x:Name="txt내일기온" Text="" Width="Auto" Height="Auto" Margin="0,2,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"
+                       TextAlignment="Left" FontSize="12pt" FontWeight="Bold" FontFamily="{DynamicResource KoPubDotum}" Foreground="#000000"/>
+                </StackPanel>
+            </StackPanel>--><!--
+        </StackPanel>
+    </Grid>-->
+</UserControl>

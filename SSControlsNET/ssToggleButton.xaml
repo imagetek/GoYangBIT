@@ -1,0 +1,25 @@
+﻿<ToggleButton x:Class="SSControlsNET.ssToggleButton"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+              xmlns:local="clr-namespace:SSControlsNET"
+              Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"
+              IsEnabledChanged="ToggleButton_IsEnabledChanged" Loaded="ToggleButton_Loaded"
+              SizeChanged="ToggleButton_SizeChanged" MouseEnter="ToggleButton_MouseEnter"
+              MouseLeave="ToggleButton_MouseLeave" Unloaded="RadioButton_Unloaded"
+              PreviewMouseLeftButtonDown="RadioButton_PreviewMouseLeftButtonDown" x:Name="BTNParent"
+              FontSize="24" BorderThickness="0" Cursor="Hand">
+    <Control.Template>
+        <ControlTemplate TargetType="{x:Type ToggleButton}">
+            <ContentPresenter Content="{TemplateBinding ContentControl.Content}"/>
+        </ControlTemplate>
+    </Control.Template>
+    <Grid Background="#02FFFFFF">
+        <Image x:Name="ToggleButtonImage" Stretch="Uniform"/>
+        <local:SSDrawingText x:Name="ButtonText" RenderOption="1" FFontSize="{Binding ElementName=BTNParent, Path=FontSize}"
+                         FFontFamily="{Binding ElementName=BTNParent, Path=FontFamily}"
+                         FFontStyle="{Binding ElementName=BTNParent, Path=FontStyle}"
+                         FFontWeight="{Binding ElementName=BTNParent, Path=FontWeight}"/>
+    </Grid>
+</ToggleButton>

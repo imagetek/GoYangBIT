@@ -1,0 +1,23 @@
+﻿<Window x:Class="SSControlsNET.wndTouchMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SSControlsNET"
+        Loaded="Window_Loaded" Closing="Window_Closing" Style="{DynamicResource wDialogStyleNoButtons}"
+        Topmost="true" Foreground="{DynamicResource COLOR_FONT_A}" Title="메세지창" Height="395" Width="750">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="65"/>
+        </Grid.RowDefinitions>
+        <Grid Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
+            <TextBlock x:Name="txtMessage" Foreground="{DynamicResource COLOR_FONT_A}" FontSize="22pt"
+                 Text="선택한 그룹은 장치를 포함하고 있습니다. 먼저 포함된 장치를 전부 삭제하세요." VerticalAlignment="Center"
+                 TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+        </Grid>
+        <Rectangle Fill="{DynamicResource COLOR_구분선G}" Grid.Row="1"/>
+        <Button Click="btn확인_Click" x:Name="btn확인" Style="{DynamicResource ssStyleBlueButton}" Content="확인"
+            Grid.Row="2" Width="120" Height="50" Margin="0,0,0,0" FontSize="18pt" VerticalAlignment="Center"
+            HorizontalAlignment="Center"/>
+    </Grid>
+</Window>

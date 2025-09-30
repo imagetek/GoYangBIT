@@ -1,0 +1,28 @@
+﻿<Window x:Class="SSControlsNET.wndProgress"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:res="clr-namespace:SSControlsNET"
+        Loaded="wndBaseDialogStyle_Loaded" Style="{DynamicResource wDialogStyleNoButtons}" FontSize="13"
+        Topmost="true" Foreground="{DynamicResource COLOR_FONT_A}"
+        FontFamily="{DynamicResource NanumBarunGothic}" Title="진행상황" Height="250" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Grid Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/SSControlsNET;component/Resources/waiting.png" Width="120"/>
+            <TextBlock x:Name="txtMessage" Foreground="{DynamicResource COLOR_FONT_A}" FontSize="18" Grid.Column="1"
+                 Text="선택한 그룹은 장치를 포함하고 있습니다. 먼저 포함된 장치를 전부 삭제하세요." VerticalAlignment="Center"
+                 TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+        </Grid>
+        <StackPanel Grid.Row="1" Margin="3">
+            <ProgressBar Name="pgrBar" Height="22" Minimum="0" Maximum="100" Value="0" Foreground="CornflowerBlue"
+                   Background="Transparent" BorderBrush="Transparent" BorderThickness="0"/>
+        </StackPanel>
+    </Grid>
+</Window>

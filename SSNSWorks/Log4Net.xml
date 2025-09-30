@@ -1,0 +1,127 @@
+﻿<p>
+  <log4net>
+    <root>
+      <level value="ALL" />
+    </root>
+    <logger name="SSNS">
+      <level value="ALL" />
+      <appender-ref ref="SSNS" />
+    </logger>
+    <logger name="SOCKET">
+      <level value="ALL" />
+      <appender-ref ref="SOCKET" />
+    </logger>
+    <logger name="SERIAL">
+      <level value="ALL" />
+      <appender-ref ref="SERIAL" />
+    </logger>    
+    <logger name="ENV">
+      <level value="ALL" />
+      <appender-ref ref="ENV" />
+    </logger>
+    <logger name="FTP">
+      <level value="ALL" />
+      <appender-ref ref="FTP" />
+    </logger>
+    <logger name="HTTP">
+      <level value="ALL" />
+      <appender-ref ref="HTTP" />
+    </logger>
+    <appender name="SSNS" type="log4net.Appender.RollingFileAppender">
+      <file value="LOG\SSNS\" />
+      <appendToFile value="true" />
+      <datePattern value="yyyyMMdd'_SSNS.log'" />
+      <staticLogFileName value="false" />
+      <rollingStyle value="Date" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%d [%t] %-5p : %m%n" />
+      </layout>
+    </appender>
+    <appender name="ENV" type="log4net.Appender.RollingFileAppender">
+      <file value="LOG\ENV\" />
+      <appendToFile value="true" />
+      <datePattern value="yyyyMMdd'_ENV.log'" />
+      <staticLogFileName value="false" />
+      <rollingStyle value="Date" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%d [%t] %-5p - %m%n" />
+      </layout>
+    </appender>
+    <appender name="SOCKET" type="log4net.Appender.RollingFileAppender">
+      <file value="LOG\SOCKET\" />
+      <appendToFile value="true" />
+      <datePattern value="yyyyMMdd'_SOCKET.log'" />
+      <staticLogFileName value="false" />
+      <rollingStyle value="Date" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%d [%t] %-5p : %m%n" />
+      </layout>
+      <!--<rollingStyle value="Size" />
+      <maxSizeRollBackups value="50" />
+      <countDirection  value="1" />
+      <maximumFileSize value="10MB" />
+      <PreserveLogFileNameExtension value="true" />      
+      <staticLogFileName value="true" />
+        <layout type="log4net.Layout.PatternLayout">
+            <conversionPattern value="%d [%t] %-5p : %m%n" />
+        </layout>-->
+    </appender>
+    <appender name="SERIAL" type="log4net.Appender.RollingFileAppender">
+      <file value="LOG\SERIAL\" />
+      <appendToFile value="true" />
+      <datePattern value="yyyyMMdd'_SERIAL.log'" />
+      <staticLogFileName value="false" />
+      <rollingStyle value="Date" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%d [%t] %-5p : %m%n" />
+      </layout>
+    </appender>
+    <appender name="FTP" type="log4net.Appender.RollingFileAppender">
+      <file value="LOG\FTP\" />
+      <appendToFile value="true" />
+      <datePattern value="yyyyMMdd'_FTP.log'" />
+      <staticLogFileName value="false" />
+      <rollingStyle value="Date" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%d [%t] %-5p - %m%n" />
+      </layout>
+    </appender>
+    <appender name="HTTP" type="log4net.Appender.RollingFileAppender">
+      <file value="LOG\HTTP\" />
+      <appendToFile value="true" />
+      <datePattern value="yyyyMMdd'_HTTP.log'" />
+      <staticLogFileName value="false" />
+      <rollingStyle value="Date" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%d [%t] %-5p - %m%n" />
+      </layout>
+    </appender>
+    <!--<appender name="DBAppender" type="log4net.Appender.AdoNetAppender">
+      <bufferSize value="1" />
+      <connectionType value="System.Data.SqlClient.SqlConnection, System.Data, Version=2.0.50727.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <connectionString value="Data Source=(local);Initial Catalog=MyDB;Integrated Security=SSPI;" />
+      <commandText value="INSERT Logs(CreateDate,Level,Message) VALUES (@CreateDate,@Level,@Message)" />
+      <parameter>
+        <parameterName value="CreateDate" />
+        <dbType value="DateTime" />
+        <layout type="log4net.Layout.RawTimeStampLayout" />
+      </parameter>
+      <parameter>
+        <parameterName value="@Level" />
+        <dbType value="String" />
+        <size value="50" />
+        <layout type="log4net.Layout.PatternLayout">
+          <conversionPattern value="%level" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@Message" />
+        <dbType value="String" />
+        <size value="4000" />
+        <layout type="log4net.Layout.PatternLayout">
+          <conversionPattern value="%message" />
+        </layout>
+      </parameter>
+    </appender>-->
+  </log4net>
+</p>

@@ -1,0 +1,34 @@
+﻿<Window x:Class="BitView.wnd관리자비번"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ctrls="clr-namespace:SSControlsNET;assembly=SSControlsNET"
+        xmlns:local="clr-namespace:BitView"
+        mc:Ignorable="d" Title="관리자 비밀번호" Width="290" Height="180" 
+        Style="{DynamicResource wDialogStyleNoButtons}"
+        Loaded="Window_Loaded" Closing="Window_Closing" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="1" />
+            <RowDefinition />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Margin="5" Orientation="Horizontal" HorizontalAlignment="Center" >
+            <TextBlock Text="관리자 비밀번호 입력" FontSize="18" TextAlignment="Center" FontWeight="Bold" Foreground="{DynamicResource COLOR_FONT_A}" VerticalAlignment="Center" />
+        </StackPanel>
+
+        <Rectangle Fill="{DynamicResource COLOR_구분선B}" Grid.Row="1"  />
+
+
+        <GroupBox Grid.Row="2" Header="비밀번호 입력" Margin="5,15,5,5">
+            <PasswordBox Name="txtPASSWD" Width="250" Height="Auto" Margin="0,0,0,0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource COLOR_FONT_A}" ctrls:TextBoxMaskBehavior.Mask="Integer"/>
+        </GroupBox>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="btn저장" Content="확인" Width="60" Height="25" Margin="0,0,5,0" VerticalAlignment="Center" HorizontalAlignment="Right" Click="btn저장_Click"/>
+            <Button x:Name="btn닫기" Content="닫기" Width="60" Height="25" Margin="0,0,5,0" VerticalAlignment="Center" HorizontalAlignment="Right" Click="btn닫기_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

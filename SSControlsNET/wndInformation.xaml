@@ -1,0 +1,17 @@
+﻿<Window x:Class="SSControlsNET.wndInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Style="{DynamicResource wDialogStyleNoButtons}" Foreground="{DynamicResource COLOR_FONT_A}"
+        FontFamily="{DynamicResource NanumBarunGothic}" FontSize="13" Title="알림메세지창" Height="250"
+        Width="500" Topmost="true">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/SSControlsNET;component/Resources/waiting.png" Width="120"/>
+        <TextBlock x:Name="txtMessage" Foreground="{DynamicResource COLOR_FONT_A}" FontSize="18" Grid.Column="1"
+               Text="선택한 그룹은 장치를 포함하고 있습니다. 먼저 포함된 장치를 전부 삭제하세요." VerticalAlignment="Center"
+               TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+    </Grid>
+</Window>

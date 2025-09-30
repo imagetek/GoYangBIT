@@ -1,0 +1,84 @@
+﻿<Window x:Class="SSAgent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SSAgent"
+        mc:Ignorable="d"
+        Title="SSAgent"
+        Height="290"
+        Width="390"
+        Icon="Siheung.ico"
+        ShowInTaskbar="True" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" 
+        Loaded="Window_Loaded" Closing="Window_Closing" Closed="Window_Closed" >
+    <Grid>
+        <Border Background="{DynamicResource COLOR_배경}" BorderThickness="2" BorderBrush="{DynamicResource COLOR_외각선}" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="32" />
+                    <RowDefinition Height="1" />
+                    <RowDefinition Height="75" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition />
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                <ContentControl MouseDoubleClick="ContentControl_MouseDoubleClick">
+                    <Grid Background="{DynamicResource COLOR_배경}" MouseLeftButtonDown="Grid_MouseLeftButtonDown" MouseMove="Grid_MouseMove" MouseLeftButtonUp="Grid_MouseLeftButtonUp">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="1" />
+                            <RowDefinition Height="1" />
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="16,0,0,0">
+                            <Image Source="/SSAgent;component/Siheung.ico" VerticalAlignment="Center" Height="30" Stretch="Uniform" />
+                            <TextBlock x:Name="txt제목" TextWrapping="NoWrap" Foreground="{DynamicResource COLOR_FONT_A}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="8,0,50,0"  />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,8,0">
+                            <Button x:Name="btnMinimize" Width="18" Height="18" VerticalAlignment="Center" Margin="5,0,0,0" Click="btnMinimize_Click" Focusable="False">
+                                <Grid HorizontalAlignment="Center">
+                                    <Line Stroke="{DynamicResource COLOR_FONT_A}" StrokeThickness="2" X1="0" Y1="9" X2="10" Y2="9" />
+                                </Grid>
+                            </Button>
+                            <Button x:Name="btnMainClose" Width="18" Height="18" VerticalAlignment="Center" Margin="5,0,0,0" Click="btnMainClose_Click"  Focusable="False">
+                                <Grid HorizontalAlignment="Center">
+                                    <Line Stroke="{DynamicResource COLOR_FONT_A}" StrokeThickness="2" X1="0" Y1="0" X2="10" Y2="9" />
+                                    <Line Stroke="{DynamicResource COLOR_FONT_A}" StrokeThickness="2" X1="10" Y1="0" X2="0" Y2="9" />
+                                </Grid>
+                            </Button>
+                        </StackPanel>
+                        <Rectangle Fill="{DynamicResource COLOR_구분선G}" Grid.Row="1" />
+                        <Rectangle Fill="{DynamicResource COLOR_구분선G}" Grid.Row="2"  />
+                    </Grid>
+                </ContentControl>
+                <Rectangle Fill="{DynamicResource COLOR_구분선G}" Grid.Row="1" />
+                <StackPanel Grid.Row="2" Margin="5">
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                        <TextBlock Text=" 현재시간 :" Width="80" Margin="0,0,0,0" FontFamily="{DynamicResource NanumBarunGothic}" TextAlignment="Right" HorizontalAlignment="Left" Foreground="{DynamicResource COLOR_FONT_B2}" VerticalAlignment="Center" />
+                        <TextBlock Name="txtDateTime" Width="Auto" Text="" Margin="5,0,0,0" TextAlignment="Left" FontSize="12" FontFamily="{DynamicResource NanumBarunGothic}" Foreground="{DynamicResource COLOR_FONT_A}" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                        <TextBlock Text=" BIT프로그램 :" Width="80" Margin="0,0,0,0" FontFamily="{DynamicResource NanumBarunGothic}" TextAlignment="Right" HorizontalAlignment="Left" Foreground="{DynamicResource COLOR_FONT_B2}" VerticalAlignment="Center" />
+                        <TextBlock Name="txtBIT_STATE" Width="Auto" Text="" Margin="5,0,0,0" TextAlignment="Left" FontSize="12" FontFamily="{DynamicResource NanumBarunGothic}" Foreground="{DynamicResource COLOR_FONT_A}" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                        <TextBlock Text=" 버전확인 :" Width="80" Margin="0,0,0,0" FontFamily="{DynamicResource NanumBarunGothic}" TextAlignment="Right" HorizontalAlignment="Left" Foreground="{DynamicResource COLOR_FONT_B2}" VerticalAlignment="Center" />
+                        <TextBlock Name="txtVERSION" Width="Auto" Text="" Margin="5,0,0,0" TextAlignment="Left" FontSize="12" FontFamily="{DynamicResource NanumBarunGothic}" Foreground="{DynamicResource COLOR_FONT_A}" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <!--<StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                        <TextBlock Text="전원종료시간 :" Width="85" FontFamily="{DynamicResource NanumBarunGothic}" TextAlignment="Right" Foreground="{DynamicResource COLOR_FONT_B2}" VerticalAlignment="Center" />
+                        <TextBlock Name="txt전원종료시간" Text="18:00" Width="Auto" Margin="5,0,0,0" TextAlignment="Left" Foreground="{DynamicResource COLOR_FONT_A}" FontFamily="{DynamicResource NanumBarunGothic}" VerticalAlignment="Center" />
+                    </StackPanel>-->
+                </StackPanel>
+                <ProgressBar Grid.Row="3" x:Name="pgrMain" Width="350" Height="15" Value="0" Foreground="DodgerBlue" Maximum="100" Margin="0,0,0,0" />
+                
+                <ListView Name="lv상태" Grid.Row="4" Margin="5" SelectionMode="Single" Background="Transparent" Foreground="{DynamicResource COLOR_FONT_A}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+                <StackPanel Grid.Row="5" Orientation="Horizontal">
+                    <Button x:Name="btn등록시작메뉴" Content="시작메뉴 등록" Width="80" Height="20" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right" Click="btn등록시작메뉴_Click"/>
+                    <CheckBox x:Name="chk업로드" Content="체크시 업로드사용" Width="Auto" Height="Auto" Margin="5,5,0,0" Foreground="{DynamicResource COLOR_FONT_A}" Checked="chk업로드_Checked" Unchecked="chk업로드_Checked" />
+                    <Button x:Name="btn버전확인" Content="버전확인" Width="60" Height="20" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right" Click="btn버전확인_Click"/>
+                    <Button x:Name="btn로그등록" Content="로그등록" Width="60" Height="20" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right" Click="btn로그등록_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,141 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Siheung.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Lib\**" />
+    <EmbeddedResource Remove="Lib\**" />
+    <None Remove="Lib\**" />
+    <Page Remove="Lib\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\BitConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\BitEnvConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\BitSystem.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Log4Net.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\BIT.db3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSCommonNET\SSCommonNET.csproj" />
+    <ProjectReference Include="..\SSControlsNET\SSControlsNET.csproj" />
+    <ProjectReference Include="..\SSData\SSData.csproj" />
+    <ProjectReference Include="..\SSMemory\SSMemory.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--<Resource Include="PAJU.ico" />-->
+    <Resource Include="Siheung.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Emgu.CV" Version="4.9.0.5494" />
+    <PackageReference Include="Emgu.CV.runtime.windows" Version="4.9.0.5494" />
+    <PackageReference Include="Emgu.CV.Wpf" Version="4.9.0.5494" />
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DirectShowLib.Standard" Version="2.1.0" />
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.6.1" />
+    <PackageReference Include="System.Management" Version="9.0.0" />
+    <PackageReference Include="System.Text.Json" Version="9.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="LCD_H\HD\old\wndLCD화면H_HD.xaml-old.cs" />
+    <Compile Remove="LCD_H\HD\wndLCD화면H_HD.xaml-old.cs" />
+    <Compile Remove="LCD_H\HD\부품\old\uc도착정보HItem_HD.xaml.cs" />
+    <Compile Remove="LCD_H\HD\부품\old\uc로고이미지H_HD.xaml.cs" />
+    <Compile Remove="LCD_H\HD\부품\old\uc버스정보창H_HD.xaml.cs" />
+    <Compile Remove="LCD_H\HD\부품\old\uc상단화면H_HD.xaml.cs" />
+    <Compile Remove="LCD_H\HD\부품\old\uc전철정보HItem_HD.xaml.cs" />
+    <Compile Remove="LCD_H\HD\부품\old\uc하단화면H_HD.xaml.cs" />
+    <Compile Remove="LCD_H\HD\부품\old\uc홍보동영상H_HD.xaml.cs" />
+    <Compile Remove="LCD_H\HD\부품\old\uc홍보이미지H_HD.xaml.cs" />
+    <Compile Remove="LCD_H\HD\부품\uc로고이미지H_HD.xaml.cs" />
+    <Compile Remove="LCD_H\HD\부품\uc전철정보HItem_HD.xaml.cs" />
+    <Compile Remove="LCD_H\HD\부품\uc홍보동영상H_HD.xaml.cs" />
+    <Compile Remove="LCD_H\HD\부품\uc홍보이미지H_HD.xaml.cs" />
+    <Compile Remove="웹캠화면\ucWebCamPanel.xaml.cs" />
+    <None Remove="data\BitConfig.json" />
+    <None Remove="data\BitEnvConfig.json" />
+    <None Remove="data\BitSystem.json" />
+    <None Remove="Settings.settings" />
+    <None Remove="Siheung.ico" />
+    <Page Remove="LCD_H\HD\old\wndLCD화면H_HD-old.xaml" />
+    <Page Remove="LCD_H\HD\wndLCD화면H_HD-old.xaml" />
+    <Page Remove="LCD_H\HD\부품\old\uc곧도착화면H_HD.xaml" />
+    <Page Remove="LCD_H\HD\부품\old\uc도착정보HItem_HD.xaml" />
+    <Page Remove="LCD_H\HD\부품\old\uc로고이미지H_HD.xaml" />
+    <Page Remove="LCD_H\HD\부품\old\uc버스정보창H_HD.xaml" />
+    <Page Remove="LCD_H\HD\부품\old\uc전철정보HItem_HD.xaml" />
+    <Page Remove="LCD_H\HD\부품\old\uc하단화면H_HD.xaml" />
+    <Page Remove="LCD_H\HD\부품\old\uc홍보동영상H_HD.xaml" />
+    <Page Remove="LCD_H\HD\부품\old\uc홍보이미지H_HD.xaml" />
+    <Page Remove="LCD_H\HD\부품\uc로고이미지H_HD.xaml" />
+    <Page Remove="LCD_H\HD\부품\uc전철정보HItem_HD.xaml" />
+    <Page Remove="LCD_H\HD\부품\uc홍보동영상H_HD.xaml" />
+    <Page Remove="LCD_H\HD\부품\uc홍보이미지H_HD.xaml" />
+    <Page Remove="웹캠화면\ucWebCamPanel.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+</Project>

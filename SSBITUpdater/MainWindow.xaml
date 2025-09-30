@@ -1,0 +1,55 @@
+﻿<Window x:Class="SSBITUpdater.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SSBITUpdater"        
+        mc:Ignorable="d" Title="BIT프로그램업데이터" Height="170" Width="320" Icon="UPDATER.ico"
+        ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" 
+        Loaded="Window_Loaded" Closing="Window_Closing" Closed="Window_Closed" >
+    <Grid>
+        <Border Background="{DynamicResource COLOR_배경}" BorderThickness="2" BorderBrush="{DynamicResource COLOR_외각선}" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="32" />
+                    <RowDefinition Height="1" />
+                    <RowDefinition />
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                <ContentControl MouseDoubleClick="ContentControl_MouseDoubleClick">
+                    <Grid Background="{DynamicResource COLOR_배경}" MouseLeftButtonDown="Grid_MouseLeftButtonDown" MouseMove="Grid_MouseMove" MouseLeftButtonUp="Grid_MouseLeftButtonUp">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="1" />
+                            <RowDefinition Height="1" />
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="16,0,0,0">
+                            <Image Source="/SSBITUpdater;component/UPDATER.ico" VerticalAlignment="Center" Width="24" Stretch="Uniform" />
+                            <TextBlock x:Name="txt제목" TextWrapping="NoWrap" Foreground="{DynamicResource COLOR_FONT_A}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="8,0,50,0"  />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,8,0">
+                            <Button x:Name="btnMinimize" Width="18" Height="18" VerticalAlignment="Center" Margin="5,0,0,0" Click="btnMinimize_Click" Focusable="False">
+                                <Grid HorizontalAlignment="Center">
+                                    <Line Stroke="{DynamicResource COLOR_FONT_A}" StrokeThickness="2" X1="0" Y1="9" X2="10" Y2="9" />
+                                </Grid>
+                            </Button>
+                            <!--<Button x:Name="btnMainClose" Width="18" Height="18" VerticalAlignment="Center" Margin="5,0,0,0" Click="btnMainClose_Click"  Focusable="False">
+                                <Grid HorizontalAlignment="Center">
+                                    <Line Stroke="{DynamicResource COLOR_FONT_A}" StrokeThickness="2" X1="0" Y1="0" X2="10" Y2="9" />
+                                    <Line Stroke="{DynamicResource COLOR_FONT_A}" StrokeThickness="2" X1="10" Y1="0" X2="0" Y2="9" />
+                                </Grid>
+                            </Button>-->
+                        </StackPanel>
+                        <Rectangle Fill="{DynamicResource COLOR_구분선G}" Grid.Row="1" />
+                        <Rectangle Fill="{DynamicResource COLOR_구분선G}" Grid.Row="2"  />
+                    </Grid>
+                </ContentControl>
+                <Rectangle Fill="{DynamicResource COLOR_구분선G}" Grid.Row="1" />
+                <StackPanel Grid.Row="2" Margin="5">
+                    <ProgressBar x:Name="pgrMain" Width="Auto" Height="15" Value="0" Foreground="DodgerBlue" Maximum="100" Margin="0,10,0,0" />
+                    <TextBlock Name="txt메세지" Width="Auto" Height="50" Margin="0,10,0,0" FontSize="12pt" TextAlignment="Center" FontFamily="{DynamicResource NanumBarunGothic}" Foreground="{DynamicResource COLOR_FONT_A}" VerticalAlignment="Center" />
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

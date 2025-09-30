@@ -1,0 +1,146 @@
+﻿<Window x:Class="BitView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ctrls="clr-namespace:SSControlsNET;assembly=SSControlsNET"
+        xmlns:local="clr-namespace:BitView"
+        mc:Ignorable="d"
+        Title="과천시BIT프로그램"
+        MinWidth="950"
+        MinHeight="500"
+        Width="950"
+        Height="500"
+        Icon="Gwacheon.ico"
+        ShowInTaskbar="True" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" 
+        Loaded="Window_Loaded" Closing="Window_Closing" Closed="Window_Closed"
+        >
+    <Grid>
+        <Border Background="{DynamicResource COLOR_배경}" BorderThickness="2" BorderBrush="{DynamicResource COLOR_외각선}" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="32" />
+                    <RowDefinition Height="1" />
+                    <RowDefinition />
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                <ContentControl MouseDoubleClick="ContentControl_MouseDoubleClick">
+                    <Grid Background="{DynamicResource COLOR_배경}" MouseLeftButtonDown="Grid_MouseLeftButtonDown" MouseMove="Grid_MouseMove" MouseLeftButtonUp="Grid_MouseLeftButtonUp">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="1" />
+                            <RowDefinition Height="1" />
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5,0,0,0">
+                            <Image Source="/SSResource;component/images/기본/gwacheon.jpg"  Width="80" Height="30" Stretch="Uniform" />
+                            <TextBlock x:Name="txt제목"
+                                       TextWrapping="NoWrap"
+                                       Foreground="{DynamicResource COLOR_FONT_A}"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Center"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,8,0">
+                            <Button x:Name="btnMinimize" Width="18" Height="18" VerticalAlignment="Center" Margin="5,0,0,0" Click="btnMinimize_Click" Focusable="False">
+                                <Grid HorizontalAlignment="Center">
+                                    <Line Stroke="{DynamicResource COLOR_FONT_A}" StrokeThickness="2" X1="0" Y1="9" X2="10" Y2="9" />
+                                </Grid>
+                            </Button>
+                            <Button x:Name="btnMaximize" Width="18" Height="18" VerticalAlignment="Center" Margin="5,0,0,0" Click="btnMaximize_Click"  Focusable="False">
+                                <Grid HorizontalAlignment="Center">
+                                    <Border x:Name="icNormal" BorderBrush="{DynamicResource COLOR_FONT_A}" BorderThickness="1,2,1,1" Width="10" Height="10" />
+                                    <Grid x:Name="icMaximize" Visibility="Collapsed">
+                                        <Border BorderBrush="{DynamicResource COLOR_FONT_A}" BorderThickness="1,2,1,1" Width="7" Height="7" Margin="3,-3,0,0" />
+                                        <Border BorderBrush="{DynamicResource COLOR_FONT_A}" Background="{DynamicResource COLOR_배경}"  BorderThickness="1,2,1,1" Width="7" Height="7" Margin="-3,3,0,0" />
+                                    </Grid>
+                                </Grid>
+                            </Button>
+                            <Button x:Name="btnMainClose" Width="18" Height="18" VerticalAlignment="Center" Margin="5,0,0,0" Click="btnMainClose_Click"  Focusable="False">
+                                <Grid HorizontalAlignment="Center">
+                                    <Line Stroke="{DynamicResource COLOR_FONT_A}" StrokeThickness="2" X1="0" Y1="0" X2="10" Y2="9" />
+                                    <Line Stroke="{DynamicResource COLOR_FONT_A}" StrokeThickness="2" X1="10" Y1="0" X2="0" Y2="9" />
+                                </Grid>
+                            </Button>
+                        </StackPanel>
+                        <Rectangle Fill="{DynamicResource COLOR_구분선B}" Grid.Row="1" />
+                        <Rectangle Fill="{DynamicResource COLOR_구분선C}" Grid.Row="2"  />
+                    </Grid>
+                </ContentControl>
+                <Rectangle Fill="{DynamicResource COLOR_구분선B}" Grid.Row="1" />
+                <DockPanel Name="docPanel" Grid.Row="2" >
+                    <local:uc메뉴바 x:Name="_u메뉴" DockPanel.Dock="Right" On메뉴선택Event="_u메뉴_On메뉴선택Event" />                    
+                    <Grid x:Name="mainGrid" HorizontalAlignment="Stretch" Grid.Row="2">                        
+                        <TabControl x:Name="tabMain" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <TabControl.ItemContainerStyle>
+                                <Style TargetType="{x:Type TabItem}">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </Style>
+                            </TabControl.ItemContainerStyle>
+                            <TabItem x:Name="tab메인" Header="메인화면">
+                                <local:uc메인화면Panel x:Name="_u메인" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                            </TabItem>
+                            <TabItem x:Name="tabBIT" Header="BIT설정">
+                                <local:ucBIT설정Panel x:Name="_uBIT설정" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </TabItem>
+                            <TabItem x:Name="tab환경" Header="환경보드">
+                                <local:ucENV2Panel x:Name="_uENV2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" On충격감지Event="_uENV2_On충격감지Event" />
+                            </TabItem>
+                            <!--<TabItem x:Name="tab웹캠"
+                                     Header="환경보드">
+                                <camera:WebCameraControl x:Name="_uCamera"
+                                                   HorizontalAlignment="Stretch"
+                                                   VerticalAlignment="Stretch"
+                                                    />
+                            </TabItem>-->
+                        </TabControl>                        
+                    </Grid>                    
+                </DockPanel>
+                <Grid  Grid.Row="2"  HorizontalAlignment="Right" 
+                       VerticalAlignment="Bottom" 
+                       Margin="0,0,60,30">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal"
+                                    x:Name="grd테스트">
+                            <Button x:Name="btn1"
+                                    Content="1"
+                                    Width="50"
+                                    Height="20"
+                                    Margin="5"
+                                    Click="btn1_Click" />
+                            <Button x:Name="btn2"
+                                    Content="2"
+                                    Width="50"
+                                    Height="20"
+                                    Margin="5"
+                                    Click="btn2_Click" />
+                            <!--<Button x:Name="speakBtn1" Content="Haemi tts" Click="speakBtn1_Click"/>
+    <Button x:Name="speakBtn2" Content="Power tts" Click="speakBtn2_Click"/>-->
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="speakBtn1"
+                                    Content="Haemi tts"
+                                    Click="speakBtn1_Click"
+                                    Width="60"
+                                    Height="20"
+                                    Margin="5" />
+                            <Button x:Name="speakBtn2"
+                                    Content="Power tts"
+                                    Click="speakBtn2_Click"
+                                    Height="20"
+                                    Width="60"
+                                    Margin="5" />
+                        </StackPanel>
+                    </StackPanel>
+                    
+                   
+                </Grid>
+               
+                <local:uc상태바 x:Name="_u상태바" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                              />
+                <Grid Grid.Row="4" x:Name="gridGrip" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="20" Height="20" Cursor="SizeNWSE" Background="#02000000" MouseLeftButtonDown="gridGrip_MouseLeftButtonDown" MouseMove="gridGrip_MouseMove" MouseLeftButtonUp="gridGrip_MouseLeftButtonUp">
+                    <Image Source="/SSResource;component/images/그립아이콘B.png" Stretch="Fill" />
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

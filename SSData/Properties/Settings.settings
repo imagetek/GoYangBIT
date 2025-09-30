@@ -1,0 +1,150 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SSData.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="test" Type="System.String" Scope="User">
+      <Value Profile="(Default)">some vale</Value>
+    </Setting>
+    <Setting Name="SEQ_NO" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="BIT_ID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">461</Value>
+    </Setting>
+    <Setting Name="MOBILE_NO" Type="System.String" Scope="User">
+      <Value Profile="(Default)">25489</Value>
+    </Setting>
+    <Setting Name="STATION_NM" Type="System.String" Scope="User">
+      <Value Profile="(Default)">산뒤마을</Value>
+    </Setting>
+    <Setting Name="SERVER_URL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.255.164</Value>
+    </Setting>
+    <Setting Name="SERVER_TYPE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="SERVER_PORT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">9001</Value>
+    </Setting>
+    <Setting Name="FTP_GBN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="FTP_IP" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FTP_PORT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="FTP_USERID" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FTP_USERPWD" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HTTP_URL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.255.165</Value>
+    </Setting>
+    <Setting Name="HTTP_PORT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">8080</Value>
+    </Setting>
+    <Setting Name="ENV_GBN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ENV_PORT_NM" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ENV_BAUD_RATE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">57600</Value>
+    </Setting>
+    <Setting Name="CAM_NO1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CAM_NO1_ROTATE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CAM_NO2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CAM_NO2_ROTATE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="LOGSAVE_DAY" Type="System.String" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="LOGSAVE_PERCENT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="ENV_USE_FAN_MANUAL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">false</Value>
+    </Setting>
+    <Setting Name="ENV_USE_HEATER_MANUAL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">false</Value>
+    </Setting>
+    <Setting Name="SHOCK_DETECT_NO" Type="System.String" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="Volume" Type="System.String" Scope="User">
+      <Value Profile="(Default)">9</Value>
+    </Setting>
+    <Setting Name="ArriveSoonGBN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="ArriveSoonTimeGBN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">180</Value>
+    </Setting>
+    <Setting Name="ArriveSoonStationGBN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="MonitorOnTime" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0430</Value>
+    </Setting>
+    <Setting Name="MonitorOffTime" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0100</Value>
+    </Setting>
+    <Setting Name="DefaultLCDLux" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="LuxCount" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="BITOrderGBN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="UseDetectSensor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="DetectSensorServiceTime" Type="System.String" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="FANMaxTemp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="FANMinTemp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="HeaterMaxTemp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="HeaterMinTemp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="ShockDetectValue" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="BITFontSize" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="TestOperationDisplayYN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="Reserve1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="PromotionRefreshInterval" Type="System.String" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="BusArrivalReshreshInterval" Type="System.String" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsSSNS" targetNamespace="http://tempuri.org/dsSSNS.xsd" xmlns:mstns="http://tempuri.org/dsSSNS.xsd" xmlns="http://tempuri.org/dsSSNS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsSSNS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsSSNS" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSSNS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtServer" msprop:Generator_RowEvHandlerName="dtServerRowChangeEventHandler" msprop:Generator_RowDeletedName="dtServerRowDeleted" msprop:Generator_RowDeletingName="dtServerRowDeleting" msprop:Generator_RowEvArgName="dtServerRowChangeEvent" msprop:Generator_TablePropName="dtServer" msprop:Generator_RowChangedName="dtServerRowChanged" msprop:Generator_UserTableName="dtServer" msprop:Generator_RowChangingName="dtServerRowChanging" msprop:Generator_RowClassName="dtServerRow" msprop:Generator_TableClassName="dtServerDataTable" msprop:Generator_TableVarName="tabledtServer">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idx" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="idxColumn" msprop:Generator_ColumnPropNameInRow="idx" msprop:Generator_UserColumnName="idx" msprop:Generator_ColumnVarNameInTable="columnidx" type="xs:int" />
+              <xs:element name="DB_GBN" msprop:Generator_ColumnPropNameInTable="DB_GBNColumn" msprop:Generator_ColumnPropNameInRow="DB_GBN" msprop:Generator_UserColumnName="DB_GBN" msprop:Generator_ColumnVarNameInTable="columnDB_GBN" type="xs:int" minOccurs="0" />
+              <xs:element name="DB_IP" msprop:Generator_ColumnPropNameInTable="DB_IPColumn" msprop:Generator_ColumnPropNameInRow="DB_IP" msprop:Generator_UserColumnName="DB_IP" msprop:Generator_ColumnVarNameInTable="columnDB_IP" type="xs:string" minOccurs="0" />
+              <xs:element name="DB_URL" msprop:Generator_ColumnPropNameInTable="DB_URLColumn" msprop:Generator_ColumnPropNameInRow="DB_URL" msprop:Generator_UserColumnName="DB_URL" msprop:Generator_ColumnVarNameInTable="columnDB_URL" type="xs:string" minOccurs="0" />
+              <xs:element name="DB_PORT" msprop:Generator_ColumnPropNameInTable="DB_PORTColumn" msprop:Generator_ColumnPropNameInRow="DB_PORT" msprop:Generator_UserColumnName="DB_PORT" msprop:Generator_ColumnVarNameInTable="columnDB_PORT" type="xs:int" minOccurs="0" />
+              <xs:element name="DB_USERID" msprop:Generator_ColumnPropNameInTable="DB_USERIDColumn" msprop:Generator_ColumnPropNameInRow="DB_USERID" msprop:Generator_UserColumnName="DB_USERID" msprop:Generator_ColumnVarNameInTable="columnDB_USERID" type="xs:string" minOccurs="0" />
+              <xs:element name="DB_PASSWD" msprop:Generator_ColumnPropNameInTable="DB_PASSWDColumn" msprop:Generator_ColumnPropNameInRow="DB_PASSWD" msprop:Generator_UserColumnName="DB_PASSWD" msprop:Generator_ColumnVarNameInTable="columnDB_PASSWD" type="xs:string" minOccurs="0" />
+              <xs:element name="FTP_GBN" msprop:Generator_ColumnPropNameInTable="FTP_GBNColumn" msprop:Generator_ColumnPropNameInRow="FTP_GBN" msprop:Generator_UserColumnName="FTP_GBN" msprop:Generator_ColumnVarNameInTable="columnFTP_GBN" type="xs:int" minOccurs="0" />
+              <xs:element name="FTP_IP" msprop:Generator_ColumnPropNameInTable="FTP_IPColumn" msprop:Generator_ColumnPropNameInRow="FTP_IP" msprop:Generator_UserColumnName="FTP_IP" msprop:Generator_ColumnVarNameInTable="columnFTP_IP" type="xs:string" minOccurs="0" />
+              <xs:element name="FTP_PORT" msprop:Generator_ColumnPropNameInTable="FTP_PORTColumn" msprop:Generator_ColumnPropNameInRow="FTP_PORT" msprop:Generator_UserColumnName="FTP_PORT" msprop:Generator_ColumnVarNameInTable="columnFTP_PORT" type="xs:int" minOccurs="0" />
+              <xs:element name="FTP_USERID" msprop:Generator_ColumnPropNameInTable="FTP_USERIDColumn" msprop:Generator_ColumnPropNameInRow="FTP_USERID" msprop:Generator_UserColumnName="FTP_USERID" msprop:Generator_ColumnVarNameInTable="columnFTP_USERID" type="xs:string" minOccurs="0" />
+              <xs:element name="FTP_PASSWD" msprop:Generator_ColumnPropNameInTable="FTP_PASSWDColumn" msprop:Generator_ColumnPropNameInRow="FTP_PASSWD" msprop:Generator_UserColumnName="FTP_PASSWD" msprop:Generator_ColumnVarNameInTable="columnFTP_PASSWD" type="xs:string" minOccurs="0" />
+              <xs:element name="FTP_BASE_PATH" msprop:Generator_ColumnPropNameInTable="FTP_BASE_PATHColumn" msprop:Generator_ColumnPropNameInRow="FTP_BASE_PATH" msprop:Generator_UserColumnName="FTP_BASE_PATH" msprop:Generator_ColumnVarNameInTable="columnFTP_BASE_PATH" type="xs:string" minOccurs="0" />
+              <xs:element name="SERVER_URL" msprop:Generator_ColumnPropNameInTable="SERVER_URLColumn" msprop:Generator_ColumnPropNameInRow="SERVER_URL" msprop:Generator_UserColumnName="SERVER_URL" msprop:Generator_ColumnVarNameInTable="columnSERVER_URL" type="xs:string" minOccurs="0" />
+              <xs:element name="SERVER_PORT" msprop:Generator_ColumnPropNameInTable="SERVER_PORTColumn" msprop:Generator_ColumnPropNameInRow="SERVER_PORT" msprop:Generator_UserColumnName="SERVER_PORT" msprop:Generator_ColumnVarNameInTable="columnSERVER_PORT" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtConfig" msprop:Generator_RowEvHandlerName="dtConfigRowChangeEventHandler" msprop:Generator_RowDeletedName="dtConfigRowDeleted" msprop:Generator_RowDeletingName="dtConfigRowDeleting" msprop:Generator_RowEvArgName="dtConfigRowChangeEvent" msprop:Generator_TablePropName="dtConfig" msprop:Generator_RowChangedName="dtConfigRowChanged" msprop:Generator_UserTableName="dtConfig" msprop:Generator_RowChangingName="dtConfigRowChanging" msprop:Generator_RowClassName="dtConfigRow" msprop:Generator_TableClassName="dtConfigDataTable" msprop:Generator_TableVarName="tabledtConfig">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idx" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="idxColumn" msprop:Generator_ColumnPropNameInRow="idx" msprop:Generator_UserColumnName="idx" msprop:Generator_ColumnVarNameInTable="columnidx" type="xs:int" />
+              <xs:element name="PGM_GBN" msprop:Generator_ColumnPropNameInTable="PGM_GBNColumn" msprop:Generator_ColumnPropNameInRow="PGM_GBN" msprop:Generator_UserColumnName="PGM_GBN" msprop:Generator_ColumnVarNameInTable="columnPGM_GBN" type="xs:int" minOccurs="0" />
+              <xs:element name="SGG_CD" msprop:Generator_ColumnPropNameInTable="SGG_CDColumn" msprop:Generator_ColumnPropNameInRow="SGG_CD" msprop:Generator_UserColumnName="SGG_CD" msprop:Generator_ColumnVarNameInTable="columnSGG_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="SGG_NM" msprop:Generator_ColumnPropNameInTable="SGG_NMColumn" msprop:Generator_ColumnPropNameInRow="SGG_NM" msprop:Generator_UserColumnName="SGG_NM" msprop:Generator_ColumnVarNameInTable="columnSGG_NM" type="xs:string" minOccurs="0" />
+              <xs:element name="VOLUME" msprop:Generator_ColumnPropNameInTable="VOLUMEColumn" msprop:Generator_ColumnPropNameInRow="VOLUME" msprop:Generator_UserColumnName="VOLUME" msprop:Generator_ColumnVarNameInTable="columnVOLUME" type="xs:int" minOccurs="0" />
+              <xs:element name="WAIT_TIME" msprop:Generator_ColumnPropNameInTable="WAIT_TIMEColumn" msprop:Generator_ColumnPropNameInRow="WAIT_TIME" msprop:Generator_UserColumnName="WAIT_TIME" msprop:Generator_ColumnVarNameInTable="columnWAIT_TIME" type="xs:int" minOccurs="0" />
+              <xs:element name="FONTS_NM" msprop:Generator_ColumnPropNameInTable="FONTS_NMColumn" msprop:Generator_ColumnPropNameInRow="FONTS_NM" msprop:Generator_UserColumnName="FONTS_NM" msprop:Generator_ColumnVarNameInTable="columnFONTS_NM" type="xs:string" minOccurs="0" />
+              <xs:element name="FONTS_SZ" msprop:Generator_ColumnPropNameInTable="FONTS_SZColumn" msprop:Generator_ColumnPropNameInRow="FONTS_SZ" msprop:Generator_UserColumnName="FONTS_SZ" msprop:Generator_ColumnVarNameInTable="columnFONTS_SZ" type="xs:int" minOccurs="0" />
+              <xs:element name="INIT_X" msprop:Generator_ColumnPropNameInTable="INIT_XColumn" msprop:Generator_ColumnPropNameInRow="INIT_X" msprop:Generator_UserColumnName="INIT_X" msprop:Generator_ColumnVarNameInTable="columnINIT_X" type="xs:double" minOccurs="0" />
+              <xs:element name="INIT_Y" msprop:Generator_ColumnPropNameInTable="INIT_YColumn" msprop:Generator_ColumnPropNameInRow="INIT_Y" msprop:Generator_UserColumnName="INIT_Y" msprop:Generator_ColumnVarNameInTable="columnINIT_Y" type="xs:double" minOccurs="0" />
+              <xs:element name="ANIME_DELAY" msprop:Generator_ColumnPropNameInTable="ANIME_DELAYColumn" msprop:Generator_ColumnPropNameInRow="ANIME_DELAY" msprop:Generator_UserColumnName="ANIME_DELAY" msprop:Generator_ColumnVarNameInTable="columnANIME_DELAY" type="xs:int" minOccurs="0" />
+              <xs:element name="RADIUS" msprop:Generator_ColumnPropNameInTable="RADIUSColumn" msprop:Generator_ColumnPropNameInRow="RADIUS" msprop:Generator_UserColumnName="RADIUS" msprop:Generator_ColumnVarNameInTable="columnRADIUS" type="xs:int" minOccurs="0" />
+              <xs:element name="USE_WEATHER_RSS" msprop:Generator_ColumnPropNameInTable="USE_WEATHER_RSSColumn" msprop:Generator_ColumnPropNameInRow="USE_WEATHER_RSS" msprop:Generator_UserColumnName="USE_WEATHER_RSS" msprop:Generator_ColumnVarNameInTable="columnUSE_WEATHER_RSS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="WEATHER_URL" msprop:Generator_ColumnPropNameInTable="WEATHER_URLColumn" msprop:Generator_ColumnPropNameInRow="WEATHER_URL" msprop:Generator_UserColumnName="WEATHER_URL" msprop:Generator_ColumnVarNameInTable="columnWEATHER_URL" type="xs:string" minOccurs="0" />
+              <xs:element name="USE_NEWS_RSS" msdata:Caption="USE_NEWS" msprop:Generator_ColumnPropNameInTable="USE_NEWS_RSSColumn" msprop:Generator_ColumnPropNameInRow="USE_NEWS_RSS" msprop:Generator_UserColumnName="USE_NEWS_RSS" msprop:Generator_ColumnVarNameInTable="columnUSE_NEWS_RSS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="NEWS_URL" msprop:Generator_ColumnPropNameInTable="NEWS_URLColumn" msprop:Generator_ColumnPropNameInRow="NEWS_URL" msprop:Generator_UserColumnName="NEWS_URL" msprop:Generator_ColumnVarNameInTable="columnNEWS_URL" type="xs:string" minOccurs="0" />
+              <xs:element name="USE_AIR_PLACE" msprop:Generator_ColumnPropNameInTable="USE_AIR_PLACEColumn" msprop:Generator_ColumnPropNameInRow="USE_AIR_PLACE" msprop:Generator_UserColumnName="USE_AIR_PLACE" msprop:Generator_ColumnVarNameInTable="columnUSE_AIR_PLACE" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AIR_PLACE_NM" msprop:Generator_ColumnPropNameInTable="AIR_PLACE_NMColumn" msprop:Generator_ColumnPropNameInRow="AIR_PLACE_NM" msprop:Generator_UserColumnName="AIR_PLACE_NM" msprop:Generator_ColumnVarNameInTable="columnAIR_PLACE_NM" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dtServer" />
+      <xs:field xpath="mstns:idx" />
+    </xs:unique>
+    <xs:unique name="dtConfig_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dtConfig" />
+      <xs:field xpath="mstns:idx" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

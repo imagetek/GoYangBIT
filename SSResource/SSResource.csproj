@@ -1,0 +1,361 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <OutputType>Library</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="images\LCD\test_cat.png" />
+    <None Remove="images\기본\gwacheon-2.png" />
+    <None Remove="images\기본\gwacheon-3.png" />
+    <None Remove="images\기본\gwacheon.jpg" />
+    <None Remove="images\기본\siheung-1.png" />
+    <None Remove="images\기본\siheung-2.png" />
+    <None Remove="images\기본\siheung-3.png" />
+    <None Remove="images\기본\siheung-4.png" />
+    <None Remove="images\기본\siheung-5.png" />
+    <None Remove="images\기본\siheung-6.png" />
+    <None Remove="images\기본\siheung.png" />
+    <None Remove="images\날씨\cloud.png" />
+    <None Remove="images\날씨\rain.png" />
+    <None Remove="images\날씨\snow.png" />
+    <None Remove="images\날씨\sun.png" />
+    <None Remove="images\날씨\sun_cloud.png" />
+    <None Remove="images\날씨\temp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\날씨\cloud.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\날씨\rain.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\날씨\snow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\날씨\sun.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\날씨\sun_cloud.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\날씨\temp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\test_cat.png" />
+    <Resource Include="images\main_handler_c.png" />
+    <Resource Include="images\그립아이콘.png" />
+    <Resource Include="images\그립아이콘B.png" />
+    <Resource Include="images\기본\gwacheon-2.png" />
+    <Resource Include="images\기본\gwacheon-3.png" />
+    <Resource Include="images\기본\gwacheon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\기본\siheung-1.png" />
+    <Resource Include="images\기본\siheung-2.png" />
+    <Resource Include="images\기본\siheung-3.png" />
+    <Resource Include="images\기본\siheung-4.png" />
+    <Resource Include="images\기본\siheung-5.png" />
+    <Resource Include="images\기본\siheung-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\팝업창\로딩화면\SSNS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메인화면\곧도착배경.png" />
+    <Resource Include="images\메인화면\버스정보배경.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메인화면\날씨배경.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메인화면\정보항목.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\팝업창\폴더선택\검색.png" />
+    <Resource Include="images\팝업창\폴더선택\기본.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\팝업창\숫자입력창\0.png" />
+    <Resource Include="images\팝업창\숫자입력창\0b.png" />
+    <Resource Include="images\팝업창\숫자입력창\1.png" />
+    <Resource Include="images\팝업창\숫자입력창\1b.png" />
+    <Resource Include="images\팝업창\숫자입력창\2.png" />
+    <Resource Include="images\팝업창\숫자입력창\2b.png" />
+    <Resource Include="images\팝업창\숫자입력창\3.png" />
+    <Resource Include="images\팝업창\숫자입력창\3b.png" />
+    <Resource Include="images\팝업창\숫자입력창\4.png" />
+    <Resource Include="images\팝업창\숫자입력창\4b.png" />
+    <Resource Include="images\팝업창\숫자입력창\5.png" />
+    <Resource Include="images\팝업창\숫자입력창\5b.png" />
+    <Resource Include="images\팝업창\숫자입력창\6.png" />
+    <Resource Include="images\팝업창\숫자입력창\6b.png" />
+    <Resource Include="images\팝업창\숫자입력창\7.png" />
+    <Resource Include="images\팝업창\숫자입력창\7b.png" />
+    <Resource Include="images\팝업창\숫자입력창\8.png" />
+    <Resource Include="images\팝업창\숫자입력창\8b.png" />
+    <Resource Include="images\팝업창\숫자입력창\9.png" />
+    <Resource Include="images\팝업창\숫자입력창\9b.png" />
+    <Resource Include="images\팝업창\숫자입력창\다시입력.png" />
+    <Resource Include="images\팝업창\숫자입력창\다시입력b.png" />
+    <Resource Include="images\팝업창\숫자입력창\닫기.png" />
+    <Resource Include="images\팝업창\숫자입력창\닫기b.png" />
+    <Resource Include="images\팝업창\숫자입력창\비밀번호배경.png" />
+    <Resource Include="images\팝업창\숫자입력창\소수점.png" />
+    <Resource Include="images\팝업창\숫자입력창\소수점b.png" />
+    <Resource Include="images\팝업창\숫자입력창\지우기.png" />
+    <Resource Include="images\팝업창\숫자입력창\지우기b.png" />
+    <Resource Include="images\팝업창\숫자입력창\확인.png" />
+    <Resource Include="images\팝업창\숫자입력창\확인b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\상단배경H.png" />
+    <Resource Include="images\LCD\상단배경W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\기본\PAJU_W.png" />
+    <Resource Include="images\기본\YTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\뉴스배경H.png" />
+    <Resource Include="images\LCD\뉴스배경W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\이미지배경W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\이미지배경H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\날씨\배경화면.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\날씨\최고최저.png" />
+    <Resource Include="images\날씨\맑음.png" />
+    <Resource Include="images\날씨\흐림.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\날씨\비.png" />
+    <Resource Include="images\날씨\번개.png" />
+    <Resource Include="images\날씨\눈.png" />
+    <Resource Include="images\날씨\비눈.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\곧도착H.png" />
+    <Resource Include="images\LCD\곧도착W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\버스정보H.png" />
+    <Resource Include="images\LCD\버스정보W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\전체배경H.png" />
+    <Resource Include="images\LCD\전체배경W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\버스상세정보H.png" />
+    <Resource Include="images\LCD\버스상세정보W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BIS\버스구분\가로\공항버스.png" />
+    <Resource Include="images\BIS\버스구분\가로\광역버스.png" />
+    <Resource Include="images\BIS\버스구분\가로\마을버스G.png" />
+    <Resource Include="images\BIS\버스구분\가로\마을버스Y.png" />
+    <Resource Include="images\BIS\버스구분\가로\시외버스.png" />
+    <Resource Include="images\BIS\버스구분\가로\일반버스.png" />
+    <Resource Include="images\BIS\버스구분\가로\좌석버스.png" />
+    <Resource Include="images\BIS\버스구분\가로\직행버스.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BIS\위치정보\곧도착.png" />
+    <Resource Include="images\BIS\위치정보\막차.png" />
+    <Resource Include="images\BIS\위치정보\차고지대기.png" />
+    <Resource Include="images\BIS\위치정보\첫차.png" />
+    <Resource Include="images\BIS\위치정보\회차지대기.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BIS\위치\현위치W.png" />
+    <Resource Include="images\BIS\위치\원.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\전철배경W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BIS\전철\오른쪽.png" />
+    <Resource Include="images\BIS\전철\왼쪽.png" />
+    <Resource Include="images\BIS\전철\현위치.png" />
+    <Resource Include="images\BIS\전철\선.png" />
+    <Resource Include="images\BIS\전철\열차.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\홍보동영상H.png" />
+    <Resource Include="images\LCD\이미지배경2H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\기본\PAJU_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\전철배경H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BIS\전철\선H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메뉴\MENU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메뉴\WEBCAM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메뉴\CONFIG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BIS\위치\실선W.png" />
+    <Resource Include="images\BIS\위치\점선W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BIS\버스구분S\가로\공항버스.png" />
+    <Resource Include="images\BIS\버스구분S\가로\광역버스.png" />
+    <Resource Include="images\BIS\버스구분S\가로\마을버스G.png" />
+    <Resource Include="images\BIS\버스구분S\가로\마을버스Y.png" />
+    <Resource Include="images\BIS\버스구분S\가로\시외버스.png" />
+    <Resource Include="images\BIS\버스구분S\가로\일반버스.png" />
+    <Resource Include="images\BIS\버스구분S\가로\좌석버스.png" />
+    <Resource Include="images\BIS\버스구분S\가로\직행버스.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BIS\위치\현위치H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BIS\위치\실선H.png" />
+    <Resource Include="images\BIS\위치\점선H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메뉴\BOARD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메뉴\CENTER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메뉴\CAMERA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메뉴\PREV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메뉴\SETTING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메뉴\HOME.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메뉴\MENU_OPEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\메뉴\BOARDb.png" />
+    <Resource Include="images\메뉴\CAMERAb.png" />
+    <Resource Include="images\메뉴\CENTERb.png" />
+    <Resource Include="images\메뉴\CONFIGb.png" />
+    <Resource Include="images\메뉴\HOMEb.png" />
+    <Resource Include="images\메뉴\PREVb.png" />
+    <Resource Include="images\메뉴\SETTINGb.png" />
+    <Resource Include="images\메뉴\WEBCAMb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\날씨\눈비.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\날씨\구름많음.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\날씨\구름조금.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\시스템에러H.png" />
+    <Resource Include="images\LCD\시스템에러W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LCD\버스정보미존재H.png" />
+    <Resource Include="images\LCD\버스정보미존재W.png" />
+    <Resource Include="images\LCD\버스정보배경H.png" />
+    <Resource Include="images\LCD\버스정보배경W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BIS\버스구분\세로\공항버스.png" />
+    <Resource Include="images\BIS\버스구분\세로\광역버스.png" />
+    <Resource Include="images\BIS\버스구분\세로\마을버스G.png" />
+    <Resource Include="images\BIS\버스구분\세로\마을버스Y.png" />
+    <Resource Include="images\BIS\버스구분\세로\시외버스.png" />
+    <Resource Include="images\BIS\버스구분\세로\일반버스.png" />
+    <Resource Include="images\BIS\버스구분\세로\좌석버스.png" />
+    <Resource Include="images\BIS\버스구분\세로\직행버스.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BIS\버스구분S\세로\마을버스Y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BIS\버스구분S\세로\공항버스.png" />
+    <Resource Include="images\BIS\버스구분S\세로\광역버스.png" />
+    <Resource Include="images\BIS\버스구분S\세로\마을버스G.png" />
+    <Resource Include="images\BIS\버스구분S\세로\시외버스.png" />
+    <Resource Include="images\BIS\버스구분S\세로\일반버스.png" />
+    <Resource Include="images\BIS\버스구분S\세로\좌석버스.png" />
+    <Resource Include="images\BIS\버스구분S\세로\직행버스.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\BIS\저상버스.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\EPD\고장신고H.png" />
+    <Resource Include="images\EPD\버스ICON.png" />
+    <Resource Include="images\EPD\버스상세정보H.png" />
+    <Resource Include="images\EPD\버스정보배경H.png" />
+    <Resource Include="images\EPD\상단배경H.png" />
+    <Resource Include="images\EPD\저상버스.png" />
+    <Resource Include="images\EPD\현위치H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\EPD\날씨\구름많음.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\EPD\날씨\구름조금.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\EPD\날씨\눈.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\EPD\날씨\눈비.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\EPD\날씨\맑음.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\EPD\날씨\배경화면.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\EPD\날씨\번개.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\EPD\날씨\비.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\EPD\날씨\비눈.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\EPD\날씨\최고최저.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\EPD\날씨\흐림.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\EPD\날씨\흐리고 비.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="BitView.uc상태바"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"              
+             Background="{DynamicResource COLOR_배경}"
+             TextOptions.TextFormattingMode="Ideal" TextOptions.TextRenderingMode="Auto"
+             mc:Ignorable="d" Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="1" />
+            <!--<ColumnDefinition Width="1" />-->
+            <ColumnDefinition Width="135" />
+            <ColumnDefinition Width="1" />
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="30" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1" />
+            <!--<RowDefinition Height="1" />-->
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Rectangle Fill="{DynamicResource COLOR_구분선C}" Grid.ColumnSpan="6" Grid.Row="0" />
+
+        <Rectangle Fill="{DynamicResource COLOR_구분선B}" Grid.Column="1" Grid.Row="1" />
+        <Rectangle Fill="{DynamicResource COLOR_구분선B}" Grid.Column="3" Grid.Row="1" />
+        <!--<Rectangle Fill="{DynamicResource COLOR_구분선B}" Grid.Column="6" Grid.Row="1" />-->
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" Margin="5,0,5,0" >
+            <TextBlock x:Name="txt사용자" Text="" VerticalAlignment="Center" TextAlignment="Left" Foreground="{DynamicResource COLOR_FONT_A}"/>
+            <TextBlock                            
+                           Text="Serial port error count today: "
+                           VerticalAlignment="Center"
+                           FontSize="14"/>
+            <TextBlock x:Name="spErrorCountTxt"
+                           Width="20"
+                           Text="0"
+                           VerticalAlignment="Center"
+                           Margin="10 0"
+                           FontSize="14"/>
+        </StackPanel>
+        <TextBlock x:Name="txtDateTime" Text="2020-09-10 12:34:56" Grid.Column="2" Grid.Row="1" Margin="5,0,5,0" VerticalAlignment="Center" TextAlignment="Right" Foreground="{DynamicResource COLOR_FONT_A}" />
+        <TextBlock Text="SHINSUNG NS TECH, All Rights Reserved." Grid.Column="4" Grid.Row="1" VerticalAlignment="Center" TextAlignment="Right" Foreground="{DynamicResource COLOR_FONT_B1}" />
+    </Grid>
+</UserControl>

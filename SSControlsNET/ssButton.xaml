@@ -1,0 +1,24 @@
+﻿<Button x:Class="SSControlsNET.ssButton"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:SSControlsNET"
+        Loaded="Button_Loaded" Unloaded="Button_Unloaded" IsVisibleChanged="Button_IsVisibleChanged"
+        IsEnabledChanged="Button_IsEnabledChanged" PreviewMouseLeftButtonDown="Button_MouseLeftButtonDown"
+        PreviewMouseLeftButtonUp="Button_MouseLeftButtonUp" SizeChanged="Button_SizeChanged"
+        MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Click="Button_Click" x:Name="btnMain"
+        BorderThickness="0" FontSize="24">
+    <Control.Template>
+        <ControlTemplate TargetType="{x:Type Button}">
+            <ContentPresenter Content="{TemplateBinding ContentControl.Content}"/>
+        </ControlTemplate>
+    </Control.Template>
+    <Grid Background="#02FFFFFF">
+        <Image x:Name="ButtonImage" Stretch="Uniform"/>
+        <local:SSDrawingText x:Name="ButtonText" ClipToBounds="false" FFontSize="{Binding ElementName=btnMain, Path=FontSize}"
+                         FFontFamily="{Binding ElementName=btnMain, Path=FontFamily}"
+                         FFontStyle="{Binding ElementName=btnMain, Path=FontStyle}"
+                         FFontWeight="{Binding ElementName=btnMain, Path=FontWeight}"/>
+    </Grid>
+</Button>

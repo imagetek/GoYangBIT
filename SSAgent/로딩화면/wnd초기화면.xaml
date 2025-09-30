@@ -1,0 +1,28 @@
+﻿<Window x:Class="SSAgent.wnd초기화면"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        x:Name="splashWindow" Width="800" Height="600"
+        WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent"  
+        ShowInTaskbar="False" WindowStartupLocation="CenterScreen" >
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Unloaded">
+            <BeginStoryboard>
+                <Storyboard x:Name="board">
+                    <DoubleAnimation Storyboard.TargetName="splashWindow" Storyboard.TargetProperty="Opacity" From="1.0" To="0" Duration="0:0:0.8" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Grid Width="600" Height="400" Background="White">
+            <!--<Grid.Background>
+                <ImageBrush ImageSource="/SSResource;component/images/팝업창/로딩화면/SSNS.jpg" />
+            </Grid.Background>-->
+            <Image Width="273" Height="242" Margin="0,20,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Source="/SSAgent;component/Resource/로딩화면/SSNS.jpg"/>
+            <Label x:Name="lblMsg" Width="Auto" Height="Auto"  Content="정보를 가져오는중입니다. 잠시만 기다려주세요." Margin="0,0,0,55" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Foreground="DimGray" FontSize="11pt" FontWeight="Bold" FontFamily="{DynamicResource NanumBarunGothic}" />
+            <ProgressBar Name="pgrMain" Width="390" Height="12" Value="5" Foreground="DodgerBlue" Maximum="100" Margin="0,0,0,110" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+
+        </Grid>
+
+    </Grid>
+</Window>
