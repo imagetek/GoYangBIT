@@ -38,11 +38,6 @@
     <Resource Include="images\main_handler_c.png" />
     <Resource Include="images\그립아이콘.png" />
     <Resource Include="images\그립아이콘B.png" />
-    <Resource Include="images\기본\siheung-1.png" />
-    <Resource Include="images\기본\siheung-2.png" />
-    <Resource Include="images\기본\siheung-3.png" />
-    <Resource Include="images\기본\siheung-4.png" />
-    <Resource Include="images\기본\siheung-5.png" />
     <Resource Include="images\기본\siheung-6.png" />
   </ItemGroup>
   <ItemGroup>

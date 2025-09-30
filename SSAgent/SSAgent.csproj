@@ -27,9 +27,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Siheung.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SSControlsNET\SSControlsNET.csproj" />
     <ProjectReference Include="..\SSData\SSData.csproj" />
     <ProjectReference Include="..\SSMemory\SSMemory.csproj" />
