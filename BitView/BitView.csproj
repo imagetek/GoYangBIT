@@ -39,7 +39,7 @@
     <DebugType>full</DebugType>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>gwacheon.ico</ApplicationIcon>
+    <ApplicationIcon>ssns.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
