@@ -27,7 +27,7 @@
                            Margin="10 0 10 0"
                            HorizontalAlignment="Left">
                         <Image.Source>
-                            <FormatConvertedBitmap  Source="/SSResource;component/images/기본/gwacheon-bw.png" />
+                            <FormatConvertedBitmap  Source="/SSResource;component/images/기본/goyang-bw.png" />
                         </Image.Source>
                     </Image>
                     <TextBlock x:Name="txt정류소"

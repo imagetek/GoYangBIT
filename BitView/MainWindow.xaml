@@ -32,7 +32,7 @@
                             <RowDefinition Height="1" />
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5,0,0,0">
-                            <Image Source="/SSResource;component/images/기본/gwacheon.jpg"  Width="80" Height="30" Stretch="Uniform" />
+                            <Image Source="/SSResource;component/images/기본/goyang-color.png"  Width="80" Height="30" Stretch="Uniform" />
                             <TextBlock x:Name="txt제목"
                                        TextWrapping="NoWrap"
                                        Foreground="{DynamicResource COLOR_FONT_A}"

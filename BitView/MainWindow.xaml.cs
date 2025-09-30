@@ -51,7 +51,7 @@ namespace BitView
 			try
 			{
 				//pjh txt제목.Text = string.Format("BITViewer v.{0}", System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Revision.ToString());
-				txt제목.Text = string.Format("BITViewer V {0}  {1}", 1.01, "25-07-22");
+				txt제목.Text = string.Format("BITViewer V {0}  {1}", 1.01, "2025-10-11");
 
 				if (_isLoaded == false)
 				{
