@@ -115,7 +115,6 @@
     <None Remove="data\BitConfig.json" />
     <None Remove="data\BitEnvConfig.json" />
     <None Remove="data\BitSystem.json" />
-    <None Remove="Gwacheon.ico" />
     <None Remove="Settings.settings" />
     <Page Remove="LCD_H\HD\old\wndLCD화면H_HD-old.xaml" />
     <Page Remove="LCD_H\HD\wndLCD화면H_HD-old.xaml" />
@@ -145,7 +144,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Gwacheon.ico" />
     <EmbeddedResource Include="Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
